@@ -104,8 +104,7 @@
 
   path-exists?: a fn of one argument, a path. Return truthy if this path is handled by the SPA"
   [{:keys [nav-handler path-exists?]}]
-  (.setUseFragment history false)
-  (.setPathPrefix history "")
+  (.setUseFragment history true)
   (.setEnabled history true)
   (set! accountant.core/nav-handler nav-handler)
   (set! accountant.core/path-exists? path-exists?)
